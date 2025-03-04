@@ -44,7 +44,7 @@ export default {
       orders: [
         { id: 1, date: '2023/03/05', sender: 'Sawayn-Streitch', destination: 'Rowan Group', weight: '1 Kg', status: 'In delivering' },
         { id: 2, date: '2023/03/06', sender: 'Doe-Johnson', destination: 'Smith LLC', weight: '2 Kg', status: 'In delivering' },
-        { id: 3, date: '2023/03/07', sender: 'Acme Corp', destination: 'Globex Inc', weight: '3 Kg', status: 'confirmed' }
+        { id: 3, date: '2023/03/07', sender: 'Acme Corp', destination: 'Globex Inc', weight: '3 Kg', status: 'Confirmed' }
       ]
     }
   },
