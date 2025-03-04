@@ -6,7 +6,11 @@
     </div>
     <div class="form-row mb-3">
       <div class="col">
-        <input v-model="searchQuery" class="form-control" placeholder="Search by sender or destination" />
+        <input
+          v-model="searchQuery"
+          class="form-control"
+          placeholder="Search by sender or destination"
+        />
       </div>
       <div class="col">
         <select v-model="statusFilter" class="form-control">
