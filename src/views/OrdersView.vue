@@ -1,15 +1,23 @@
 <template>
-  <div class="content">
-    <router-link to="add"><button>Add new order</button></router-link>
-    <p>Message is: {{ message }}</p>
-    <input v-model="searchQuery" placeholder="Search by sender or destination" />
-    <select v-model="statusFilter">
-      <option>All status</option>
-      <option>In delivering</option>
-      <option>Confirmed</option>
-      <option>Delivered</option>
-    </select>
-    <table>
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <router-link to="add" class="btn btn-primary">Add new order</router-link>
+      <p class="mb-0">Message is: {{ message }}</p>
+    </div>
+    <div class="form-row mb-3">
+      <div class="col">
+        <input v-model="searchQuery" class="form-control" placeholder="Search by sender or destination" />
+      </div>
+      <div class="col">
+        <select v-model="statusFilter" class="form-control">
+          <option>All status</option>
+          <option>In delivering</option>
+          <option>Confirmed</option>
+          <option>Delivered</option>
+        </select>
+      </div>
+    </div>
+    <table class="table table-striped">
       <thead>
         <tr>
           <th @click="sortBy('date')">Date</th>
@@ -28,8 +36,8 @@
           <td>{{ order.weight }}</td>
           <td>{{ order.status }}</td>
           <td>
-            <button @click="nextStatus(order)">Next status</button>
-            <button @click="deleteOrder(order.id)">Delete</button>
+            <button @click="nextStatus(order)" class="btn btn-sm btn-info">Next status</button>
+            <button @click="deleteOrder(order.id)" class="btn btn-sm btn-danger">Delete</button>
           </td>
         </tr>
       </tbody>
